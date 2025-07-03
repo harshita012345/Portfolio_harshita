@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-white text-gray-900 font-serif;
+  }
+}
+
 .text-stroke {
     -webkit-text-stroke: thin !important;
     -webkit-text-stroke-color: #140095 !important;
