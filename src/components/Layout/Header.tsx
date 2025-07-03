@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+type HeaderProps = {
+  activeSection: string;
+};
+
 const navLinks = [
   { name: "Home", href: "home" },
   { name: "About Me", href: "about" },
@@ -8,10 +12,9 @@ const navLinks = [
   { name: "Contact", href: "contact" },
 ];
 
-export default function Header() {
+export default function Header({ activeSection }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Scroll to section by id
   const handleNavClick = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
@@ -19,11 +22,6 @@ export default function Header() {
       window.scrollTo({ top: y, behavior: "smooth" });
       setMenuOpen(false);
     }
-    // const section = document.getElementById(id);
-    // if (section) {
-    //   section.scrollIntoView({ behavior: "smooth" });
-    //   setMenuOpen(false);
-    // }
   };
 
   return (
@@ -38,7 +36,8 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => handleNavClick(link.href)}
-                className="hover:text-indigo-400 transition-colors duration-200 bg-transparent border-none outline-none"
+                className={`hover:text-indigo-400 transition-colors duration-200 bg-transparent border-none outline-none
+                  ${activeSection === link.href ? "text-indigo-400 font-bold" : ""}`}
               >
                 {link.name}
               </button>
@@ -56,27 +55,17 @@ export default function Header() {
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            {/* {menuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : ( */}
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
               d="M4 8h16M4 16h16"
             />
-            {/* )} */}
           </svg>
         </button>
       </nav>
       {menuOpen && (
         <ul className="fixed inset-0 bg-black bg-opacity-80 z-50 flex flex-col justify-center items-center space-y-6 md:hidden">
-          {/* Close button */}
           <button
             className="absolute top-2 right-3 text-white text-3xl focus:outline-none"
             onClick={() => setMenuOpen(false)}
@@ -89,7 +78,8 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => handleNavClick(link.href)}
-                className="text-xl py-2 px-4 rounded hover:bg-gray-800 transition-colors duration-200 w-full text-center bg-transparent border-none outline-none"
+                className={`text-xl py-2 px-4 rounded hover:bg-gray-800 transition-colors duration-200 w-full text-center bg-transparent border-none outline-none
+                  ${activeSection === link.href ? "text-indigo-400 font-bold underline" : ""}`}
               >
                 {link.name}
               </button>
