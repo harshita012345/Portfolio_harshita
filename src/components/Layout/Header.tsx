@@ -15,9 +15,15 @@ export default function Header() {
   const handleNavClick = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const y = section.getBoundingClientRect().top + window.pageYOffset - 64;
+      window.scrollTo({ top: y, behavior: "smooth" });
       setMenuOpen(false);
     }
+    // const section = document.getElementById(id);
+    // if (section) {
+    //   section.scrollIntoView({ behavior: "smooth" });
+    //   setMenuOpen(false);
+    // }
   };
 
   return (
@@ -58,12 +64,12 @@ export default function Header() {
                 d="M6 18L18 6M6 6l12 12"
               />
             ) : ( */}
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 8h16M4 16h16"
-              />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 8h16M4 16h16"
+            />
             {/* )} */}
           </svg>
         </button>

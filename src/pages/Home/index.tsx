@@ -52,7 +52,7 @@ const Home = () => {
             </section>
 
             {/*  Introduction */}
-            <section ref={introRef} className="section-animate p-5 sm:p-10 text-left">
+            <section ref={introRef} className="section-animate m-5 sm:m-10 text-left">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div className="">
                         <div>
@@ -108,7 +108,7 @@ const Home = () => {
                         />
                     </div>
                 </div>
-                <div id="about" className="p-5 sm:p-10 text-left">
+                <div id="about" className="m-5 sm:m-10 text-left">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-start mb-8">
                         <div className="py-4">
                             <h2 className="text-4xl md:text-5xl font-bold text-title mb-4">About Me</h2>
@@ -130,7 +130,7 @@ const Home = () => {
             {/* career */}
             <section id="career" className="section-animate">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
-                    <div className="p-5 sm:p-10 text-left">
+                    <div className="m-5 sm:m-10 text-left">
                         <h3 className="text-4xl md:text-5xl font-bold text-title mb-4">Career</h3>
                         <p>Throughout my career as a MERN Stack Developer, I have contributed to the development of
                             multiple real-world applications across domains such as e-commerce, HRMS, and finance. I’ve built full-stack solutions from the ground up using technologies like React.js, Next.js, Node.js, NestJS, MongoDB, and PostgreSQL.
@@ -150,7 +150,7 @@ const Home = () => {
 
             {/* projects */}
             <section id="projects" className="bg-gray-100 section-animate">
-                <div className="p-5 sm:p-10 text-left">
+                <div className="m-5 sm:m-10 text-left">
                     <h4 className="text-4xl md:text-5xl font-bold text-title mb-4">Projects</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div>
@@ -206,7 +206,7 @@ const Home = () => {
 
             {/* Contact */}
             <section id="contact" className="section-animate">
-                <div className="p-5 sm:p-10 text-left">
+                <div className="m-5 sm:m-10 text-left">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
                         <div>
                             <img
@@ -247,7 +247,7 @@ const Home = () => {
 
             {/* Thank you */}
             <section className="bg-gray-100 section-animate" id="thankyou">
-                <div className="p-5 sm:p-10 text-center">
+                <div className="m-5 sm:m-10 text-center">
                     <h6 className="text-4xl md:text-5xl font-bold text-title mb-4">Thank You!</h6>
                     <p>Thank you for taking the time to explore my portfolio. I truly appreciate your interest in my work and journey as a MERN Stack Developer. I’m passionate about building meaningful, user-focused applications and always eager to take on new challenges. If my experience aligns with your goals, I’d love to connect and collaborate.</p>
                 </div>
