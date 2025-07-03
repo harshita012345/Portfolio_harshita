@@ -79,7 +79,7 @@ export default function Header({ activeSection }: HeaderProps) {
                 type="button"
                 onClick={() => handleNavClick(link.href)}
                 className={`text-xl py-2 px-4 rounded hover:bg-gray-800 transition-colors duration-200 w-full text-center bg-transparent border-none outline-none
-                  ${activeSection === link.href ? "text-indigo-400 font-bold underline" : ""}`}
+                  ${activeSection === link.href ? "text-indigo-400 font-bold" : ""}`}
               >
                 {link.name}
               </button>
